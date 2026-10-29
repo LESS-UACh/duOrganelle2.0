@@ -118,6 +118,14 @@ python3 extract_neighborhood.py --gfa outdir/spades/assembly_graph_with_scaffold
 - **Runaway extension.** With wide default genome ranges, NOVOPlasty can extend the mitochondrial track into repeats or nuclear insertions. Use `-g_mt` when a size estimate is available.
 - Tested on three datasets so far: *Fuchsia magellanica* and *Oenothera villaricae* (Onagraceae), and *Punica granatum* (Lythraceae).
 
+## Authors
+
+Millaray Aranda-Díaz, Fernanda E. Angulo, Anaía Soto-Ivanoff and José J. Nuñez — Instituto de Ciencias Marinas y Limnológicas, Facultad de Ciencias, Universidad Austral de Chile (LESS-UACh).
+
+## Acknowledgments
+
+Parts of the code and documentation were prepared with the assistance of Claude (Anthropic). The authors reviewed and tested all code and take full responsibility for it.
+
 ## Citation
 
 If you use DuOrganelle, please cite the paper above and the tools it wraps: NOVOPlasty (Dierckxsens et al. 2017), GetOrganelle (Jin et al. 2020), SPAdes (Prjibelski et al. 2020), BLAST+ (Camacho et al. 2009), minimap2 (Li 2018), SAMtools (Danecek et al. 2021) and BBTools (Bushnell).
