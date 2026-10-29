@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use DuOrganelle, please cite the article below."
+repository-code: "https://github.com/LESS-UACh/duOrganelle2.0"
+title: "DuOrganelle: joint, reference-free assembly of plant plastid and mitochondrial genomes from one short-read library"
+version: 2.0.1
+date-released: 2026-10-29
+license: MIT
+authors:
+  - family-names: "Nuñez"
+    given-names: "José J."
+    affiliation: "Universidad Austral de Chile"
+preferred-citation:
+  type: article
+  title: "Organellar Genomes of the Hummingbird Fuchsia, Fuchsia magellanica (Onagraceae)"
+  journal: "International Journal of Molecular Sciences"
+  year: 2026
+  authors:
+    - family-names: "Soto-Ivanoff"
+      given-names: "A."
+    - family-names: "Angulo"
+      given-names: "F.E."
+    - family-names: "Aranda-Díaz"
+      given-names: "M."
+    - family-names: "Nuñez"
+      given-names: "José J."
