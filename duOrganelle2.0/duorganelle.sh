@@ -94,17 +94,14 @@
 #                   oversized mt contig.
 #
 # THE ROUND-1 BOOTSTRAP GAP (read this before running blind on precious data):
-#   In round 1, if NEITHER -r_mt nor -r_pt is given, neither track has
-#   anything yet to screen the other against -- both run with zero
-#   cross-organelle protection for exactly one round, identical in principle
-#   to the original repeatMito failure mode. From round 2 onward, each track
-#   screens against the OTHER track's round-1+ accumulation, which is when
-#   protection actually starts. This is a real, structural limitation of fully
-#   blind bootstrapping, not an oversight -- it is presented as such in
-#   README.md ("Limitations") rather than hidden. Passing
-#   either -r_mt or -r_pt (even an imperfect/distantly-related one) removes
-#   the gap for whichever direction you can supply it, and is recommended
-#   whenever available.
+#   Since v2.0.1 the plastid track runs FIRST in every round. Without -r_mt or
+#   -r_pt, the plastid track therefore runs its round 1 with no cross-organelle
+#   screen (the mt track has produced nothing yet); the mitochondrial track is
+#   screened against the plastid track's output from round 1 onward. In v2.0.0
+#   both tracks ran unprotected in round 1 and the mt track, running first,
+#   absorbed plastid sequence that then caused the plastid contigs to be
+#   rejected. Passing -r_pt or -r_mt (even an imperfect/distantly-related one)
+#   removes the remaining gap for that direction. See README.md ("Limitations").
 # =============================================================================
 set -euo pipefail
 
@@ -270,11 +267,9 @@ fi
 KMER_LIST="$KMER_CLEAN"
 
 if [ -z "$REF_MT" ] && [ -z "$REF_PT" ]; then
-  echo "WARNING: neither -r_mt nor -r_pt given. Round 1 of BOTH tracks will run with zero" >&2
-  echo "         cross-organelle protection (see header comment: THE ROUND-1 BOOTSTRAP GAP)." >&2
-  echo "         Protection begins in round 2, once each track has something from the other" >&2
-  echo "         to screen against. Strongly consider supplying at least one of -r_mt/-r_pt" >&2
-  echo "         if any reference (even a distantly related one) is available." >&2
+  echo "NOTE: neither -r_mt nor -r_pt given. The plastid track runs first and its round 1 has no" >&2
+  echo "      cross-organelle screen; the mitochondrial track is screened against the plastid" >&2
+  echo "      output from round 1 onward (see header comment: THE ROUND-1 BOOTSTRAP GAP)." >&2
 fi
 
 echo "=== DuOrganelle pipeline started: $(date) (mode=$MODE) ===" | tee "$OUTDIR/report/run.log"

@@ -6,6 +6,15 @@ version: 2.0.1
 date-released: 2026-10-29
 license: MIT
 authors:
+  - family-names: "Aranda-Díaz"
+    given-names: "Millaray"
+    affiliation: "Universidad Austral de Chile"
+  - family-names: "Angulo"
+    given-names: "Fernanda E."
+    affiliation: "Universidad Austral de Chile"
+  - family-names: "Soto-Ivanoff"
+    given-names: "Anaía"
+    affiliation: "Universidad Austral de Chile"
   - family-names: "Nuñez"
     given-names: "José J."
     affiliation: "Universidad Austral de Chile"
@@ -16,10 +25,10 @@ preferred-citation:
   year: 2026
   authors:
     - family-names: "Soto-Ivanoff"
-      given-names: "A."
+      given-names: "Anaía"
     - family-names: "Angulo"
-      given-names: "F.E."
+      given-names: "Fernanda E."
     - family-names: "Aranda-Díaz"
-      given-names: "M."
+      given-names: "Millaray"
     - family-names: "Nuñez"
       given-names: "José J."
